@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "750258753519",
+    "project_id": "pedapp-c5ae3",
+    "storage_bucket": "pedapp-c5ae3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750258753519:android:d0652a3c530448f3e5f01a",
+        "android_client_info": {
+          "package_name": "com.example.lectorqr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsFjVW344b40MnadenNDSPxgAcafMhdcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
