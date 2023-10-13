@@ -35,28 +35,17 @@ class MainActivity : AppCompatActivity() {
 //        val refe = FirebaseDatabase.getInstance().getReference("131313/conteo/personas")
         if (result != null)
         {
-            if (result.contents == null)
+            when (result.contents)
             {
-                Toast.makeText(this, "Cancelado", Toast.LENGTH_LONG).show()
-            } else if (result.contents == "https://me-qr.com/mAd6egUk")
-            {
-//                Log.d("PedAPP", refe.toString())
-//                val query = refe.get()
-//////                Log.d("PedaAPP", query.toString())
-//                query.addOnSuccessListener { result ->
-//                    // El nodo existe
-//                    var value = result.child("personas").value as String
-//                    Log.d("PedAPP", "El nombre del usuario es $value")
-//                    Toast.makeText(this, "QR valido $result", Toast.LENGTH_LONG).show()
-//                }.addOnFailureListener { e ->
-//                    Toast.makeText(this, "Error al obtener datos de Firebase: ${e.message}", Toast.LENGTH_LONG).show()
-//                    Log.d("PedAPP", "El nombre del usuario es ")
-//                }
-                Toast.makeText(this, "QR valido", Toast.LENGTH_LONG).show()
-            }
-            else
-            {
-                Toast.makeText(this, "QR Invalido", Toast.LENGTH_LONG).show()
+                null -> {
+                    Toast.makeText(this, "Cancelado", Toast.LENGTH_LONG).show()
+                }
+                "https://me-qr.com/mAd6egUk" -> {
+                    Toast.makeText(this, "QR valido", Toast.LENGTH_LONG).show()
+                }
+                else -> {
+                    Toast.makeText(this, "QR Invalido", Toast.LENGTH_LONG).show()
+                }
             }
         }
         else
